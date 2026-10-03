@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KsiSway | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Ionicons for Social/UI icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <img src="assets/bg.jpg" alt="Background" class="bg-image">
@@ -14,6 +17,7 @@
         <div class="logo">KsiSway</div>
         <div class="nav-links">
             <a href="#home">Home</a>
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
@@ -23,7 +27,40 @@
         <div class="hero-glass">
             <h1>Hi, I'm <span>KsiSway</span></h1>
             <p>I build high-performance software, craft elegant user interfaces, and explore the future of web and systems development.</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <div class="hero-actions">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="assets/resume.pdf" class="btn btn-outline" download>
+                    <ion-icon name="document-text-outline"></ion-icon> Resume
+                </a>
+            </div>
+            <div class="socials">
+                <a href="https://github.com/KsiSway" target="_blank" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="#" target="_blank" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-glass fade-in">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate developer focusing on building robust, scalable, and secure systems. With a strong background in software engineering, I specialize in both low-level systems programming and modern web architecture.</p>
+                    <p>When I'm not writing code, you can find me exploring new technologies, contributing to open-source tools, or analyzing network topologies.</p>
+                </div>
+                <div class="skills">
+                    <h3>Core Technologies</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">JavaScript / HTML / CSS</span>
+                        <span class="skill-tag">Git & CI/CD</span>
+                        <span class="skill-tag">PowerShell & Bash</span>
+                        <span class="skill-tag">Networking & Security</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -58,12 +95,38 @@
                 </a>
             </div>
 
+            <div class="project-card fade-in">
+                <div class="project-icon">🌐</div>
+                <h3 class="project-title">Chrome DevTools MCP</h3>
+                <p class="project-desc">A customized Model Context Protocol server enabling AI agents to control and inspect the Chrome browser.</p>
+                <a href="https://github.com/KsiSway/chrome-devtools-mcp" class="project-link" target="_blank">
+                    View on GitHub <span>→</span>
+                </a>
+            </div>
+
         </div>
     </section>
 
-    <footer id="contact" class="fade-in">
-        <h2>Ready to collaborate?</h2>
-        <p style="margin: 1rem 0 2rem;">Let's build something amazing together.</p>
+    <section id="contact" class="contact">
+        <div class="contact-glass fade-in">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>Have a project in mind or just want to say hi? Send me a message!</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks for reaching out! This is a demo form.');">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="fade-in">
         <a href="https://github.com/KsiSway" class="btn" target="_blank">Visit my GitHub</a>
         <p style="margin-top: 4rem; font-size: 0.9rem;">© 2026 KsiSway. Designed with Antigravity.</p>
     </footer>
